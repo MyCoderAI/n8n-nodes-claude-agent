@@ -39,7 +39,8 @@
             "dist/credentials/ClaudeApi.credentials.js"
         ],
         "nodes": [
-            "dist/nodes/ClaudeCode/ClaudeCode.node.js"
+            "dist/nodes/ClaudeCode/ClaudeCode.node.js",
+            "dist/nodes/ClaudeCode/ClaudeCodeTest.node.js"
         ]
     },
     "devDependencies": {
