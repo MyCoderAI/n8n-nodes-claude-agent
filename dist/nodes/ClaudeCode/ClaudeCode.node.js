@@ -360,7 +360,7 @@ class ClaudeCode {
             throw new n8n_workflow_1.ApplicationError('Claude API credentials are required');
         }
         process.env.ANTHROPIC_API_KEY = credentials.apiKey;
-        const { query } = await Promise.resolve().then(() => __importStar(require('@anthropic-ai/claude-code')));
+        const { query } = await Promise.resolve().then(() => __importStar(require('@anthropic-ai/claude-agent-sdk')));
         for (let i = 0; i < items.length; i++) {
             try {
                 const operation = this.getNodeParameter('operation', i);

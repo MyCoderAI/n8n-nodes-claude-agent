@@ -343,9 +343,9 @@ export class ClaudeCode implements INodeType {
 		// Set API key in environment for Claude SDK
 		process.env.ANTHROPIC_API_KEY = credentials.apiKey as string;
 
-		// Dynamic import of ESM module (required for @anthropic-ai/claude-code)
+		// Dynamic import of ESM module (required for @anthropic-ai/claude-agent-sdk)
 		// @ts-ignore - Dynamic import of ESM module in CommonJS
-		const { query } = await import('@anthropic-ai/claude-code');
+		const { query } = await import('@anthropic-ai/claude-agent-sdk');
 
 		for (let i = 0; i < items.length; i++) {
 			try {
