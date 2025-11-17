@@ -52,9 +52,9 @@
         "typescript": "5.9.2"
     },
     "dependencies": {
-        "n8n-workflow": "*"
+        "@anthropic-ai/claude-code": "latest"
     },
-    "optionalDependencies": {
-        "@anthropic-ai/claude-agent-sdk": "^0.1.42"
+    "peerDependencies": {
+        "n8n-workflow": "*"
     }
 }
