@@ -19,6 +19,7 @@ export class ClaudeCodeTest implements INodeType {
 		},
 		inputs: ['main'],
 		outputs: ['main'],
+		usableAsTool: true,
 		properties: [
 			{
 				displayName: 'Test Input',

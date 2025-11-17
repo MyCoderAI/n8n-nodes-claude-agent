@@ -16,6 +16,7 @@ class ClaudeCodeTest {
             },
             inputs: ['main'],
             outputs: ['main'],
+            usableAsTool: true,
             properties: [
                 {
                     displayName: 'Test Input',

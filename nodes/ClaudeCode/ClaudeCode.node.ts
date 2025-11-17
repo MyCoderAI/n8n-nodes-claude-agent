@@ -6,7 +6,6 @@ import type {
 } from 'n8n-workflow';
 
 import { ApplicationError } from 'n8n-workflow';
-import { query } from '@anthropic-ai/claude-agent-sdk';
 
 export class ClaudeCode implements INodeType {
 	description: INodeTypeDescription = {
@@ -343,6 +342,9 @@ export class ClaudeCode implements INodeType {
 
 		// Set API key in environment for Claude SDK
 		process.env.ANTHROPIC_API_KEY = credentials.apiKey as string;
+
+		// Lazy load Claude SDK only when executing (prevents blocking n8n node loading)
+		const { query } = await import('@anthropic-ai/claude-agent-sdk');
 
 		for (let i = 0; i < items.length; i++) {
 			try {
