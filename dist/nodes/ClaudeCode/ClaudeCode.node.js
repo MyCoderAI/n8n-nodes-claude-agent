@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ClaudeCode = void 0;
 const n8n_workflow_1 = require("n8n-workflow");
+const claude_code_1 = require("@anthropic-ai/claude-code");
 class ClaudeCode {
     constructor() {
         this.description = {
@@ -327,8 +328,6 @@ class ClaudeCode {
             throw new n8n_workflow_1.ApplicationError('Claude API credentials are required');
         }
         process.env.ANTHROPIC_API_KEY = credentials.apiKey;
-        const claudeCode = await eval('import("@anthropic-ai/claude-code")');
-        const query = claudeCode.query;
         for (let i = 0; i < items.length; i++) {
             try {
                 const operation = this.getNodeParameter('operation', i);
@@ -339,7 +338,7 @@ class ClaudeCode {
                         ? `Generate ${language} code: ${prompt}`
                         : prompt;
                     const messages = [];
-                    const result = query({
+                    const result = (0, claude_code_1.query)({
                         prompt: fullPrompt,
                         options: {
                             permissionMode: 'plan',
@@ -408,7 +407,7 @@ class ClaudeCode {
                         queryOptions.includePartialMessages = true;
                     }
                     const messages = [];
-                    const result = query({
+                    const result = (0, claude_code_1.query)({
                         prompt: taskDescription,
                         options: queryOptions,
                     });

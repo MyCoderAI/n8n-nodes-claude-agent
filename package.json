@@ -34,12 +34,11 @@
     ],
     "n8n": {
         "n8nNodesApiVersion": 1,
-        "strict": false,
         "credentials": [
             "dist/credentials/ClaudeApi.credentials.js"
         ],
         "nodes": [
-            "dist/nodes/ClaudeCode/ClaudeCodeTest.node.js"
+            "dist/nodes/ClaudeCode/ClaudeCode.node.js"
         ]
     },
     "devDependencies": {
@@ -49,6 +48,9 @@
         "prettier": "3.6.2",
         "release-it": "^19.0.4",
         "typescript": "5.9.2"
+    },
+    "dependencies": {
+        "@anthropic-ai/claude-code": "latest"
     },
     "peerDependencies": {
         "n8n-workflow": "*"

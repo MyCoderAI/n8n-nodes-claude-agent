@@ -7,6 +7,9 @@ import type {
 
 import { ApplicationError } from 'n8n-workflow';
 
+// @ts-ignore - ESM module imported in CommonJS context
+import { query } from '@anthropic-ai/claude-code';
+
 export class ClaudeCode implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Claude Code',
@@ -342,10 +345,6 @@ export class ClaudeCode implements INodeType {
 
 		// Set API key in environment for Claude SDK
 		process.env.ANTHROPIC_API_KEY = credentials.apiKey as string;
-
-		// Dynamically import ESM module at runtime
-		const claudeCode = await eval('import("@anthropic-ai/claude-code")') as any;
-		const query = claudeCode.query;
 
 		for (let i = 0; i < items.length; i++) {
 			try {
