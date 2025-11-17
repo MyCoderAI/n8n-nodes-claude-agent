@@ -1,0 +1,31 @@
+{
+    "node": "n8n-nodes-base.claudeCode",
+    "nodeVersion": "1.0",
+    "codexVersion": "1.0",
+    "categories": [
+        "AI",
+        "Development"
+    ],
+    "resources": {
+        "credentialDocumentation": [
+            {
+                "url": "https://docs.anthropic.com/en/api/getting-started"
+            }
+        ],
+        "primaryDocumentation": [
+            {
+                "url": "https://github.com/miguelgonzalez/n8n-nodes-claude-code"
+            }
+        ],
+        "generic": [
+            {
+                "label": "Claude Agent SDK Documentation",
+                "url": "https://docs.claude.com/en/docs/agent-sdk/typescript"
+            },
+            {
+                "label": "n8n Community",
+                "url": "https://community.n8n.io"
+            }
+        ]
+    }
+}
