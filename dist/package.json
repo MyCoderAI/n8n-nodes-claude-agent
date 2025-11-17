@@ -1,6 +1,6 @@
 {
     "name": "@coderai/n8n-nodes-claude-agent",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "n8n node for Claude Code AI agent integration - execute autonomous coding tasks and generate code",
     "license": "MIT",
     "homepage": "https://github.com/miguelgonzalez/n8n-nodes-claude-agent",
@@ -39,7 +39,6 @@
             "dist/credentials/ClaudeApi.credentials.js"
         ],
         "nodes": [
-            "dist/nodes/ClaudeCode/ClaudeCode.node.js",
             "dist/nodes/ClaudeCode/ClaudeCodeTest.node.js"
         ]
     },
@@ -50,9 +49,6 @@
         "prettier": "3.6.2",
         "release-it": "^19.0.4",
         "typescript": "5.9.2"
-    },
-    "dependencies": {
-        "@anthropic-ai/claude-code": "latest"
     },
     "peerDependencies": {
         "n8n-workflow": "*"
