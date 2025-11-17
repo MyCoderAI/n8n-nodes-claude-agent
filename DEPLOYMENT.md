@@ -1,4 +1,4 @@
-# Deployment Guide for n8n-nodes-claude-agent
+# Deployment Guide for @coderai/n8n-nodes-claude-agent
 
 ## Overview
 
@@ -84,8 +84,8 @@ The custom n8n node for Claude Code integration is ready for deployment. This no
    ```
 
 4. **Verify Publication:**
-   - Check your package at: https://www.npmjs.com/package/n8n-nodes-claude-agent
-   - It may take a few minutes to appear
+   - Check your package at: https://www.npmjs.com/package/@coderai/n8n-nodes-claude-agent
+   - ✅ **PUBLISHED**: The package is live at v0.1.0!
 
 ### Important Notes
 
@@ -109,12 +109,12 @@ Once published, users can install your node in two ways:
 ### Method 1: Via n8n UI (Recommended)
 1. Go to **Settings** > **Community Nodes**
 2. Click **Install a community node**
-3. Enter: `n8n-nodes-claude-agent`
+3. Enter: `@coderai/n8n-nodes-claude-agent`
 4. Click **Install**
 
 ### Method 2: Via npm
 ```bash
-npm install n8n-nodes-claude-agent
+npm install @coderai/n8n-nodes-claude-agent
 ```
 
 ## Usage

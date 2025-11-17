@@ -1,5 +1,5 @@
 {
-    "name": "n8n-nodes-claude-agent",
+    "name": "@coderai/n8n-nodes-claude-agent",
     "version": "0.1.0",
     "description": "n8n node for Claude Code AI agent integration - execute autonomous coding tasks and generate code",
     "license": "MIT",
@@ -27,8 +27,7 @@
         "dev": "n8n-node dev",
         "lint": "n8n-node lint",
         "lint:fix": "n8n-node lint --fix",
-        "release": "n8n-node release",
-        "prepublishOnly": "n8n-node prerelease"
+        "release": "n8n-node release"
     },
     "files": [
         "dist"
@@ -50,9 +49,6 @@
         "prettier": "3.6.2",
         "release-it": "^19.0.4",
         "typescript": "5.9.2"
-    },
-    "peerDependencies": {
-        "n8n-workflow": "*"
     },
     "dependencies": {
         "@anthropic-ai/claude-agent-sdk": "^0.1.42"

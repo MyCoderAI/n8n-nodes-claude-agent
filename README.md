@@ -1,4 +1,4 @@
-# n8n-nodes-claude-agent
+# @coderai/n8n-nodes-claude-agent
 
 This is an n8n community node that integrates [Claude Code](https://docs.claude.com/en/docs/agent-sdk/overview) autonomous AI agent capabilities into your n8n workflows.
 
@@ -20,7 +20,7 @@ This is an n8n community node that integrates [Claude Code](https://docs.claude.
 
 1. Go to **Settings** > **Community Nodes** in your n8n instance
 2. Click **Install a community node**
-3. Enter `n8n-nodes-claude-agent` in the npm package name field
+3. Enter `@coderai/n8n-nodes-claude-agent` in the npm package name field
 4. Click **Install**
 
 ### Manual Installation
@@ -28,7 +28,7 @@ This is an n8n community node that integrates [Claude Code](https://docs.claude.
 To install this node manually in your local n8n instance:
 
 ```bash
-npm install n8n-nodes-claude-agent
+npm install @coderai/n8n-nodes-claude-agent
 ```
 
 For Docker-based n8n installations, you can add this package to your `package.json` or install it via the n8n UI.
@@ -237,7 +237,7 @@ npm link
 
 ```bash
 # In your n8n installation directory
-npm link n8n-nodes-claude-agent
+npm link @coderai/n8n-nodes-claude-agent
 
 # Start n8n
 n8n start
