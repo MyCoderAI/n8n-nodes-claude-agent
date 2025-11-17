@@ -50,9 +50,7 @@
         "typescript": "5.9.2"
     },
     "dependencies": {
-        "@anthropic-ai/claude-code": "latest"
-    },
-    "peerDependencies": {
-        "n8n-workflow": "*"
+        "@anthropic-ai/claude-code": "latest",
+        "n8n-workflow": "^1.0.0"
     }
 }
