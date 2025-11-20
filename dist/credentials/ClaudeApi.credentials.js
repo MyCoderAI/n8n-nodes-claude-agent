@@ -38,8 +38,8 @@ class ClaudeApi {
                     'Content-Type': 'application/json',
                 },
                 body: {
-                    model: 'claude-3-5-sonnet-20241022',
-                    max_tokens: 10,
+                    model: 'claude-3-haiku-20240307',
+                    max_tokens: 100,
                     messages: [
                         {
                             role: 'user',
