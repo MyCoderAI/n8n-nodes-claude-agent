@@ -325,6 +325,17 @@ class ClaudeCode {
                             placeholder: 'session_abc123def456',
                         },
                         {
+                            displayName: 'Output Schema (JSON)',
+                            name: 'outputSchema',
+                            type: 'string',
+                            typeOptions: {
+                                rows: 5,
+                            },
+                            default: '',
+                            description: 'Define a JSON schema to enforce structured output format. Leave empty for default output.',
+                            placeholder: '{"type": "object", "properties": {"result": {"type": "string"}}, "required": ["result"]}',
+                        },
+                        {
                             displayName: 'Model Override',
                             name: 'model',
                             type: 'options',
@@ -449,6 +460,18 @@ class ClaudeCode {
                     }
                     if (additionalOptions.resumeSessionId) {
                         queryOptions.resume = additionalOptions.resumeSessionId;
+                    }
+                    if (additionalOptions.outputSchema) {
+                        try {
+                            const schema = JSON.parse(additionalOptions.outputSchema);
+                            queryOptions.outputFormat = {
+                                type: 'json_schema',
+                                schema: schema,
+                            };
+                        }
+                        catch (error) {
+                            throw new n8n_workflow_1.ApplicationError(`Invalid JSON in Output Schema: ${error}`);
+                        }
                     }
                     const messages = [];
                     const result = query({

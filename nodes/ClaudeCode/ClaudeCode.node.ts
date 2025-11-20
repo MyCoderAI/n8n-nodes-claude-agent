@@ -302,10 +302,21 @@ export class ClaudeCode implements INodeType {
 					description: 'Session ID to resume a previous conversation. Leave empty to start a new session.',
 					placeholder: 'session_abc123def456',
 				},
-					{
-						displayName: 'Model Override',
-						name: 'model',
-						type: 'options',
+				{
+					displayName: 'Output Schema (JSON)',
+					name: 'outputSchema',
+					type: 'string',
+					typeOptions: {
+						rows: 5,
+					},
+					default: '',
+					description: 'Define a JSON schema to enforce structured output format. Leave empty for default output.',
+					placeholder: '{"type": "object", "properties": {"result": {"type": "string"}}, "required": ["result"]}',
+				},
+				{
+					displayName: 'Model Override',
+					name: 'model',
+					type: 'options',
 						options: [
 							{
 								name: 'Sonnet (Default)',
@@ -457,6 +468,18 @@ export class ClaudeCode implements INodeType {
 
 				if (additionalOptions.resumeSessionId) {
 					queryOptions.resume = additionalOptions.resumeSessionId;
+				}
+
+				if (additionalOptions.outputSchema) {
+					try {
+						const schema = JSON.parse(additionalOptions.outputSchema as string);
+						queryOptions.outputFormat = {
+							type: 'json_schema',
+							schema: schema,
+						};
+					} catch (error) {
+						throw new ApplicationError(`Invalid JSON in Output Schema: ${error}`);
+					}
 				}
 
 				// Execute the agent task

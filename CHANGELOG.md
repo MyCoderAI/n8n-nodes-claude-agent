@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.18] - 2025-11-20
+
+### Added
+- Output Schema support: Define JSON schemas to enforce structured output formats
+- New "Output Schema (JSON)" field in Additional Options for consistent, predictable outputs
+- Automatic validation and parsing of JSON schemas before execution
+
+### Changed
+- Enhanced data consistency by allowing users to define expected output structures
+
 ## [0.1.17] - 2025-11-20
 
 ### Added
