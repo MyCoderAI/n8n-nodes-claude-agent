@@ -3,7 +3,7 @@
     "version": "0.1.11",
     "description": "n8n node for Claude Code AI agent integration - execute autonomous coding tasks and generate code",
     "license": "MIT",
-    "homepage": "https://github.com/miguelgonzalez/n8n-nodes-claude-agent",
+    "homepage": "https://github.com/MyCoderAI/n8n-nodes-claude-agent",
     "keywords": [
         "n8n-community-node-package",
         "claude",
@@ -14,12 +14,12 @@
         "claude-code"
     ],
     "author": {
-        "name": "Miguel González",
+        "name": "CoderAI",
         "email": "miguelneov@gmail.com"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/miguelgonzalez/n8n-nodes-claude-agent.git"
+        "url": "https://github.com/MyCoderAI/n8n-nodes-claude-agent.git"
     },
     "scripts": {
         "build": "n8n-node build",

@@ -220,7 +220,7 @@ Permission Mode: Accept Edits
 
 ```bash
 # Clone the repository
-git clone https://github.com/miguelgonzalez/n8n-nodes-claude-agent.git
+git clone https://github.com/MyCoderAI/n8n-nodes-claude-agent.git
 cd n8n-nodes-claude-agent
 
 # Install dependencies
@@ -265,7 +265,7 @@ npm run lint:fix
 ## Support
 
 For issues, questions, or contributions:
-- [GitHub Issues](https://github.com/miguelgonzalez/n8n-nodes-claude-agent/issues)
+- [GitHub Issues](https://github.com/MyCoderAI/n8n-nodes-claude-agent/issues)
 - [n8n Community](https://community.n8n.io)
 
 ## Contributing
@@ -280,7 +280,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Author
 
-Miguel González - [GitHub](https://github.com/miguelgonzalez)
+CoderAI - [GitHub](https://github.com/MyCoderAI)
 
 ---
 

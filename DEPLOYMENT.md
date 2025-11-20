@@ -128,8 +128,8 @@ Full usage examples are in the README.md file.
 
 ## Support and Maintenance
 
-- **Repository:** https://github.com/miguelgonzalez/n8n-nodes-claude-agent
-- **Issues:** https://github.com/miguelgonzalez/n8n-nodes-claude-agent/issues
+- **Repository:** https://github.com/MyCoderAI/n8n-nodes-claude-agent
+- **Issues:** https://github.com/MyCoderAI/n8n-nodes-claude-agent/issues
 - **n8n Community:** https://community.n8n.io
 
 ## License
