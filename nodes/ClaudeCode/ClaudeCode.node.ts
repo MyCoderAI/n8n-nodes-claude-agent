@@ -280,20 +280,28 @@ export class ClaudeCode implements INodeType {
 						description: 'Environment variables as JSON object',
 						placeholder: '{"NODE_ENV": "production"}',
 					},
-					{
-						displayName: 'Include Partial Messages',
-						name: 'includePartialMessages',
-						type: 'boolean',
-						default: false,
-						description: 'Whether to include partial message events in the output',
-					},
-					{
-						displayName: 'Max Thinking Tokens',
-						name: 'maxThinkingTokens',
-						type: 'number',
-						default: 0,
-						description: 'Maximum tokens for thinking process (0 for default)',
-					},
+				{
+					displayName: 'Include Partial Messages',
+					name: 'includePartialMessages',
+					type: 'boolean',
+					default: false,
+					description: 'Whether to include partial message events in the output',
+				},
+				{
+					displayName: 'Max Thinking Tokens',
+					name: 'maxThinkingTokens',
+					type: 'number',
+					default: 0,
+					description: 'Maximum tokens for thinking process (0 for default)',
+				},
+				{
+					displayName: 'Resume Session ID',
+					name: 'resumeSessionId',
+					type: 'string',
+					default: '',
+					description: 'Session ID to resume a previous conversation. Leave empty to start a new session.',
+					placeholder: 'session_abc123def456',
+				},
 					{
 						displayName: 'Model Override',
 						name: 'model',
@@ -443,11 +451,15 @@ export class ClaudeCode implements INodeType {
 						queryOptions.env = env;
 					}
 
-					if (additionalOptions.includePartialMessages) {
-						queryOptions.includePartialMessages = true;
-					}
+				if (additionalOptions.includePartialMessages) {
+					queryOptions.includePartialMessages = true;
+				}
 
-					// Execute the agent task
+				if (additionalOptions.resumeSessionId) {
+					queryOptions.resume = additionalOptions.resumeSessionId;
+				}
+
+				// Execute the agent task
 					const messages: unknown[] = [];
 					const result = query({
 						prompt: taskDescription,

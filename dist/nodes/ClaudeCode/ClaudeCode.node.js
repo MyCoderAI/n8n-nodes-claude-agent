@@ -317,6 +317,14 @@ class ClaudeCode {
                             description: 'Maximum tokens for thinking process (0 for default)',
                         },
                         {
+                            displayName: 'Resume Session ID',
+                            name: 'resumeSessionId',
+                            type: 'string',
+                            default: '',
+                            description: 'Session ID to resume a previous conversation. Leave empty to start a new session.',
+                            placeholder: 'session_abc123def456',
+                        },
+                        {
                             displayName: 'Model Override',
                             name: 'model',
                             type: 'options',
@@ -438,6 +446,9 @@ class ClaudeCode {
                     }
                     if (additionalOptions.includePartialMessages) {
                         queryOptions.includePartialMessages = true;
+                    }
+                    if (additionalOptions.resumeSessionId) {
+                        queryOptions.resume = additionalOptions.resumeSessionId;
                     }
                     const messages = [];
                     const result = query({

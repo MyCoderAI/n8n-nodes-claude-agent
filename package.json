@@ -1,6 +1,6 @@
 {
     "name": "@coderai/n8n-nodes-claude-agent",
-    "version": "0.1.16",
+    "version": "0.1.17",
     "description": "n8n node for Claude Code AI agent integration - execute autonomous coding tasks and generate code",
     "license": "MIT",
     "homepage": "https://github.com/MyCoderAI/n8n-nodes-claude-agent",
