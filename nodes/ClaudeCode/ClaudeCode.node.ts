@@ -303,6 +303,13 @@ export class ClaudeCode implements INodeType {
 					placeholder: 'session_abc123def456',
 				},
 				{
+					displayName: 'Fork Session',
+					name: 'forkSession',
+					type: 'boolean',
+					default: false,
+					description: 'Whether to fork the resumed session to a new session ID, allowing new configurations (like output schemas) to be applied while keeping conversation context',
+				},
+				{
 					displayName: 'Output Schema (JSON)',
 					name: 'outputSchema',
 					type: 'string',
@@ -468,6 +475,10 @@ export class ClaudeCode implements INodeType {
 
 				if (additionalOptions.resumeSessionId) {
 					queryOptions.resume = additionalOptions.resumeSessionId;
+				}
+
+				if (additionalOptions.forkSession) {
+					queryOptions.forkSession = true;
 				}
 
 				if (additionalOptions.outputSchema) {

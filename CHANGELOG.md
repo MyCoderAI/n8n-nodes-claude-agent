@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.19] - 2025-11-20
+
+### Added
+- Fork Session option: Fork resumed sessions to new session IDs while preserving conversation context
+- Allows applying new configurations (like output schemas) when resuming sessions
+
+### Fixed
+- Output schemas now work correctly with resumed sessions when Fork Session is enabled
+- Resolved issue where resumed sessions ignored new configuration options
+
 ## [0.1.18] - 2025-11-20
 
 ### Added
